@@ -8,6 +8,8 @@ Web untuk mencari No. Waybill dari export JMS **Pencarian Scan** (contoh: scan U
 JMS > Pencarian Scan > pilih jenis scan (mis. Unpack), station & tanggal > export (.xlsx)
 
 ## Cara pakai
+Ada video tutorial di bagian bawah halaman web.
+
 1. Buka link di atas, klik **Pilih File** (atau tarik file ke kotak upload).
 2. Ketik No. Waybill (bisa banyak sekaligus, pisahkan spasi / baris baru), klik **Cari**.
 3. Hasil: `Masuk bagging ke-X dan waybill ke-Y`, plus No. Bagging, urutan total, waktu scan. Klik **Lihat di daftar** untuk loncat ke barisnya.
@@ -37,4 +39,5 @@ File diolah langsung di browser (pakai [SheetJS](https://sheetjs.com)). Tidak ad
 
 ## Catatan pengembangan
 - Repo publik: jangan commit data (`.xlsx/.csv`, folder `test/`).
+- Video tutorial: `tutorial.mp4` (kompres dari rekaman asli: `ffmpeg -i <asli>.mp4 -vf scale=1280:-2 -crf 27 -preset slow -b:a 96k -movflags +faststart tutorial.mp4`), poster `tutorial.jpg`.
 - Setiap `app.js` diubah, naikkan `?v=` di `index.html`.

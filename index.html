@@ -83,13 +83,16 @@
   .kolom select { font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--text); max-width: 100%; }
   .kolom .contoh { font-family: ui-monospace, Consolas, monospace; color: var(--muted); font-size: 13px; }
   .tersembunyi { display: none; }
+  .video { display: block; width: 100%; height: auto; margin-top: 12px; border-radius: 10px; border: 1px solid var(--line); background: #000; }
+  .sub a, .petunjuk a { color: var(--accent); font-weight: 600; }
+  html { scroll-behavior: smooth; }
   ol.langkah { margin: 8px 0 0; padding-left: 20px; color: var(--muted); font-size: 14px; }
 </style>
 </head>
 <body>
 <main>
   <h1>Urutan Scan Bagging</h1>
-  <p class="sub">Cari AWB masuk bagging ke berapa dan waybill ke berapa, diurutkan dari waktu scan. Sumber: JMS &gt; Pencarian Scan (contoh: scan Unpack) &gt; export .xlsx</p>
+  <p class="sub">Cari AWB masuk bagging ke berapa dan waybill ke berapa, diurutkan dari waktu scan. Sumber: JMS &gt; Pencarian Scan (contoh: scan Unpack) &gt; export .xlsx &middot; <a href="#tutorial">Lihat video tutorial</a></p>
 
   <section class="card">
     <label class="drop" id="drop">
@@ -134,6 +137,16 @@
     </div>
     <div id="viewBag"></div>
     <div id="viewAwb" class="tersembunyi"></div>
+  </section>
+
+  <section class="card" id="tutorial">
+    <h2>Video tutorial</h2>
+    <p class="petunjuk">Dari tarik data di JMS sampai cari AWB di web ini (&plusmn; 2 menit).</p>
+    <video class="video" controls preload="metadata" playsinline poster="tutorial.jpg">
+      <source src="tutorial.mp4" type="video/mp4">
+      Browser Anda tidak bisa memutar video. <a href="tutorial.mp4">Download video tutorial</a>.
+    </video>
+    <p class="petunjuk"><a href="tutorial.mp4" target="_blank" rel="noopener">Buka video di tab baru</a></p>
   </section>
 
   <section class="card">
